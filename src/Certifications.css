@@ -1,0 +1,472 @@
+.certification-section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    overflow: hidden;
+}
+
+.certification-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certification-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.certification-section .subtitle-glow {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: #a855f7;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.certification-section .glowing-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.certification-section .gradient-text { 
+    background: linear-gradient(90deg, #7c5cff, #3b82f6, #ec4899, #7c5cff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🌐 Globe Perspective Wrapper */
+.certification-section .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.certification-section .carousel-3d-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* 3D Perspective Depth (Globe Effect) */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+/* Glassmorphism Globe Card */
+.certification-section .card-3d {
+    position: absolute;
+    width: 330px;
+    height: 445px;
+    border-radius: 24px;
+    background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6),inset 0 1px 0 rgba(255,255,255,0.2);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: border-color 0.4s ease,box-shadow 0.4s ease;
+}
+
+/* Active Center Card Glow */
+.active-card {
+    border-color: rgba(164, 85, 247, 0.6) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 0 50px rgba(124, 92, 255, 0.35), 0 25px 70px rgba(0, 0, 0, 0.9),inset 0 0 20px rgba(168, 85, 247, 0.15) !important;
+    background: linear-gradient(
+    135deg,
+    rgba(124, 92, 255, 0.18) 0%,
+    rgba(18, 28, 38, 0.85) 100%
+) !important;
+}
+
+.certification-section .card-glass-content {
+    padding: 28px 22px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.certification-section .card-top-icon {
+    font-size: 34px;
+    color: #7c5cff;
+    margin-bottom: 14px;
+}
+
+.certification-section .card-cat {
+    font-size: 0.75rem;
+    color: #38bdf8;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.certification-section .card-head {
+    font-size: 1.35rem;
+    color: #fff;
+    margin: 8px 0;
+    font-weight: 700;
+}
+
+.certification-section .card-desc {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.certification-section .card-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.certification-section .card-tags span {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #cbd5e1;
+}
+
+.certification-section .card-actions{
+    margin-top:16px;
+}
+
+.certification-section .btn-link{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:10px 14px;
+    font-size:.85rem;
+    font-weight:600;
+    border-radius:12px;
+    color:#fff;
+    text-decoration:none;
+    background:#7c5cff;
+    border:1px solid #7c5cff;
+    transition:.3s ease;
+}
+
+.certification-section .btn-link:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 15px rgba(124, 92, 255, 0.5);
+}
+
+.certification-section .active-link {
+    background: #7c5cff;
+    border-color: #7c5cff;
+    box-shadow: 0 0 15px rgba(124, 92, 255, 0.5);
+}
+
+/* Buttons & Dots */
+.certification-section .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 30;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.certification-section .nav-btn:hover {
+    background: #7c5cff;
+    box-shadow: 0 0 20px rgba(124, 92, 255, 0.6);
+}
+
+.certification-section .prev-btn { left: 20px; }
+.certification-section .next-btn { right: 20px; }
+
+.certification-section .carousel-dots {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.certification-section .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.certification-section .active-dot {
+    background: #7c5cff;
+    width: 28px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7c5cff;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 1024px) {
+
+    .certification-section {
+        padding: 80px 0;
+    }
+
+    .certification-section .carousel-wrapper {
+        max-width: 950px;
+        height: 480px;
+        padding: 0 50px;
+    }
+
+    .certification-section .card-3d {
+        width: 300px;
+        height: 410px;
+    }
+
+    .certification-section .glowing-title {
+        font-size: 2.7rem;
+    }
+
+    .certification-section .prev-btn {
+        left: 10px;
+    }
+
+    .certification-section .next-btn {
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .certification-section {
+        padding: 70px 0;
+    }
+
+    .certification-container {
+        padding: 0 15px;
+    }
+
+    .certification-header {
+        margin-bottom: 30px;
+    }
+
+    .certification-section .subtitle-glow {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .certification-section .glowing-title {
+        font-size: 2.3rem;
+    }
+
+    .certification-section .carousel-wrapper {
+        width: 100%;
+        height: 450px;
+        padding: 0 45px;
+        overflow: hidden;
+    }
+
+    .certification-section .carousel-3d-container {
+        perspective: 800px;
+    }
+
+    .certification-section .card-3d {
+        width: 280px;
+        height: 390px;
+    }
+
+    .certification-section .card-glass-content {
+        padding: 22px 18px;
+    }
+
+    .certification-section .card-top-icon {
+        font-size: 30px;
+    }
+
+    .certification-section .card-head {
+        font-size: 1.15rem;
+    }
+
+    .certification-section .card-desc {
+        font-size: 0.8rem;
+    }
+
+    .certification-section .nav-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .certification-section .prev-btn {
+        left: 5px;
+    }
+
+    .certification-section .next-btn {
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .certification-section {
+        padding: 55px 0;
+    }
+
+    .certification-container {
+        padding: 0 12px;
+    }
+
+    .certification-section .glowing-title {
+        font-size: 2rem;
+    }
+
+    .certification-section .subtitle-glow {
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+    }
+
+    .certification-section .carousel-wrapper {
+        height: 420px;
+        padding: 0 35px;
+    }
+
+    .certification-section .carousel-3d-container {
+        perspective: 700px;
+    }
+
+    .certification-section .card-3d {
+        width: 260px;
+        height: 370px;
+        border-radius: 20px;
+    }
+
+    .certification-section .card-glass-content {
+        padding: 20px 16px;
+    }
+
+    .certification-section .card-top-icon {
+        font-size: 27px;
+        margin-bottom: 10px;
+    }
+
+    .certification-section .card-cat {
+        font-size: 0.65rem;
+    }
+
+    .certification-section .card-head {
+        font-size: 1.05rem;
+    }
+
+    .certification-section .card-desc {
+        font-size: 0.75rem;
+        line-height: 1.45;
+    }
+
+    .certification-section .card-tags span {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    .certification-section .btn-link {
+        font-size: 0.75rem;
+        padding: 9px 12px;
+    }
+
+    .certification-section .nav-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .certification-section .carousel-dots {
+        margin-top: 15px;
+        gap: 8px;
+    }
+
+    .certification-section .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .certification-section .active-dot {
+        width: 22px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .certification-section .glowing-title {
+        font-size: 1.8rem;
+    }
+
+    .certification-section .carousel-wrapper {
+        height: 400px;
+        padding: 0 30px;
+    }
+
+    .certification-section .card-3d {
+        width: 240px;
+        height: 350px;
+    }
+
+    .certification-section .card-glass-content {
+        padding: 18px 14px;
+    }
+
+    .certification-section .card-head {
+        font-size: 1rem;
+    }
+
+    .certification-section .card-desc {
+        font-size: 0.7rem;
+    }
+
+    .certification-section .nav-btn {
+        width: 34px;
+        height: 34px;
+    }
+}

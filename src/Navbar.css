@@ -1,0 +1,143 @@
+
+   /*NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+
+    background: rgba(3, 0, 10, 0.92);
+    backdrop-filter: blur(12px);
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+
+    font-family: 'Garamond', serif;
+}
+
+
+/* LOGO
+========================= */
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    color: rgb(141, 128, 154);
+}
+
+
+/* NAV LINKS
+========================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #d3d8de;
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a855f7;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        height: 60px;
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+    }
+}
+
+
+/* MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 55px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 1.05rem;
+    }
+
+    /*
+       Hide desktop links.
+       IMPORTANT:
+       This prevents horizontal overflow.
+    */
+    .nav-links {
+        display: none;
+    }
+}
+
+
+/* SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        height: 50px;
+        padding: 0 12px;
+    }
+
+    .logo {
+        font-size: 0.95rem;
+    }
+}

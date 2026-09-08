@@ -1,0 +1,268 @@
+.skills-section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+}
+
+.skills-section .skills-container {
+    width: 100%;
+    max-width: 1280px; /* 6 card in one line */
+    margin: 0 auto;
+}
+
+.skills-section .skills-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills-section .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /*glow*/
+    background: linear-gradient(90deg, #7c5cff, #3b82f6, #5c0c7e, #7c5cff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s ease infinite;
+}
+
+
+.skills-section .section-title span {
+    color: #7c5cff;
+}
+
+.skills-section .section-subtitle {
+    color: #a1a1aa;
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+/* 6 Column Grid Fix */
+.skills-section .expand-skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important; /* Force 6 Columns */
+    gap: 12px !important;
+    align-items: start;
+    width: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* Expanding Card Styling for 6-column layout */
+.skills-section .expand-card {
+
+  background: rgba(255, 255, 255, 0.03) !important;
+  
+  /* 2. glass effect*/
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  
+  /* 3. shining glass effect*/
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.25) !important; /* മുകൾ ഭാഗത്ത് കൂടുതൽ തിളക്കം */
+  
+  border-radius: 16px;
+  padding: 0 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* 4. light glass shadow */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* mouse Hover effect */
+.skills-section .expand-card:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(124, 92, 255, 0.6) !important;
+  box-shadow: 0 12px 40px rgba(124, 92, 255, 0.35), 
+              inset 0 0 15px rgba(255, 255, 255, 0.1); /* ഇൻസൈഡ് ഗ്ലോ */
+}
+
+
+/* Card Header (Icon + Name) */
+.skills-section .card-top {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skills-section .card-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.skills-section .card-title {
+    font-size: 13px; 
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Expandable Content */
+.skills-section .card-details {
+    padding-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skills-section .details-exp {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.skills-section .level-text {
+    color: #7c5cff;
+    font-weight: 700;
+}
+
+.skills-section .progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skills-section .progress-fill {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.skills-section .topics-list {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.skills-section .topic-badge {
+    font-size: 9px;
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #e2e8f0;
+}
+
+
+/* RESPONSIVE SKILLS GRID
+================================ */
+
+/* Laptop / Tablet */
+@media (max-width: 1200px) {
+    .skills-section .skills-container {
+        padding: 0 25px;
+    }
+
+    .skills-section .expand-skills-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .skills-section {
+        padding: 70px 0;
+    }
+
+    .skills-section .skills-container {
+        padding: 0 20px;
+    }
+
+    .skills-section .section-title {
+        font-size: 2.5rem;
+    }
+
+    .skills-section .expand-skills-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .skills-section {
+        padding: 60px 0;
+    }
+
+    .skills-section .skills-container {
+        padding: 0 15px;
+    }
+
+    .skills-section .skills-header {
+        margin-bottom: 30px;
+    }
+
+    .skills-section .section-title {
+        font-size: 2.1rem;
+    }
+
+    .skills-section .section-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .skills-section .expand-skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .skills-section .expand-card {
+        border-radius: 13px;
+        padding: 0 10px;
+    }
+
+    .skills-section .card-top {
+        height: 58px;
+        gap: 7px;
+    }
+
+    .skills-section .card-icon {
+        font-size: 20px;
+    }
+
+    .skills-section .card-title {
+        font-size: 12px;
+    }
+
+    .skills-section .card-details {
+        padding-bottom: 12px;
+    }
+
+    .skills-section .details-exp {
+        font-size: 10px;
+    }
+
+    .skills-section .topic-badge {
+        font-size: 8px;
+        padding: 2px 5px;
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width: 400px) {
+    .skills-section .expand-skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .skills-section .expand-card {
+        width: 100%;
+    }
+
+    .skills-section .section-title {
+        font-size: 1.9rem;
+    }
+}

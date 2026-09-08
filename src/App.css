@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 70% 35%,
+            rgba(0, 0, 1, 0.22) 0%,
+            rgba(0, 2, 8, 0.12) 25%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(4, 0, 8, 0.18) 0%,
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #020204 0%,
+            #000005 35%,
+            #000105 100%
+        );
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================
+   PORTFOLIO APP
+========================================= */
+
+.portfolio-app {
+    background-color: #000000;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-app::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+
+/* =========================================
+   BACKGROUND VIDEO
+========================================= */
+
+.portfolio-app .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+
+    filter:
+        brightness(1.1)
+        contrast(1.1)
+        saturate(1);
+
+    transform: scale(1);
+}
+
+
+/* =========================================
+   SOCIAL SIDEBAR
+========================================= */
+
+.portfolio-app .social-sidebar {
+    position: fixed;
+    right: 3%;
+    top: 40%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    z-index: 10;
+}
+
+.portfolio-app .social-sidebar a {
+    color: #f5f5fa;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-app .social-sidebar a:hover {
+    color: #a855f7;
+    transform: translateX(-5px);
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.portfolio-app .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: calc(100vh - 90px);
+
+    padding: 0 70px;
+}
+
+.portfolio-app .hero-text {
+    max-width: 600px;
+    margin-left: 80px;
+}
+
+.portfolio-app .greeting {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    color: #f7f7fc;
+}
+
+.portfolio-app .name {
+    font-size: 4.2rem;
+    font-weight: 800;
+    margin: 10px 0;
+    letter-spacing: -1px;
+    color: #f8fafc;
+}
+
+.portfolio-app .sub-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.portfolio-app .hero-text h1,
+.portfolio-app .hero-text h3,
+.portfolio-app .hero-text p,
+.portfolio-app .hero-text span {
+    transition: all 0.3s ease;
+}
+
+.portfolio-app .hero-text h1:hover {
+    transform: translateY(-5px);
+    text-shadow:
+        0 0 10px #080308,
+        0 0 25px #4b3178;
+}
+
+.portfolio-app .hero-text h3:hover {
+    color: #c084fc;
+}
+
+.portfolio-app .hero-text p:hover {
+    color: rgb(227, 216, 98);
+    transform: translateX(5px);
+}
+
+.portfolio-app .hero-text span:hover {
+    color: #f5e5e3;
+}
+
+.portfolio-app .name span {
+    color: #190a5c;
+}
+
+.portfolio-app .role {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f4f4f5;
+    margin-bottom: 20px;
+}
+
+.portfolio-app .divider {
+    color: #a855f7;
+    margin: 0 8px;
+}
+
+.portfolio-app .description {
+    color: #ebebef;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.portfolio-app .btn-group {
+    display: flex;
+    gap: 20px;
+    font: inherit;
+}
+
+.portfolio-app .btn-glow,
+.portfolio-app .btn-outline {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    padding: 13px 26px;
+    border-radius: 999px;
+
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.portfolio-app .btn-glow::before,
+.portfolio-app .btn-outline::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #bb61dc,
+        #f6f5f7
+    );
+
+    border-radius: 999px;
+
+    transition: width 0.4s ease;
+
+    z-index: -1;
+}
+
+.portfolio-app .btn-glow:hover::before,
+.portfolio-app .btn-outline:hover::before {
+    width: 100%;
+}
+
+.portfolio-app .btn-glow:hover,
+.portfolio-app .btn-outline:hover {
+    color: #301484;
+}
+
+.portfolio-app .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    border: 1px solid hsla(258, 55%, 31%, 0.018);
+}
+
+.portfolio-app .btn-glow {
+    background: transparent;
+    color: white;
+    border: 2px solid #7c3aed;
+}
+
+
+/* =========================================
+   HERO VISUAL
+========================================= */
+
+.portfolio-app .hero-visual {
+    position: relative;
+
+    width: 600px;
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: visible;
+}
+
+.portfolio-app .bubble-hero-video {
+    width: 700px;
+    height: 700px;
+
+    object-fit: contain;
+
+    border: none;
+    border-radius: 0;
+
+    filter:
+        brightness(1.08)
+        contrast(1.08);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BRAIN GRAPHIC
+========================================= */
+
+.portfolio-app .brain-graphic {
+    position: relative;
+
+    width: 250px;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-app .data-line {
+    position: absolute;
+
+    width: 2px;
+    height: 120px;
+
+    animation: dataFlow 2s linear infinite;
+}
+
+@keyframes dataFlow {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   SCROLL DOWN
+========================================= */
+
+.portfolio-app .scroll-down {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.portfolio-app .scroll-circle {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    color: #a1a1aa;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .portfolio-app .hero-container {
+        padding: 100px 40px 50px;
+        gap: 20px;
+    }
+
+    .portfolio-app .hero-text {
+        margin-left: 0;
+        max-width: 52%;
+    }
+
+    .portfolio-app .name {
+        font-size: 3.4rem;
+    }
+
+    .portfolio-app .sub-title {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-app .hero-visual {
+        width: 45%;
+        height: auto;
+    }
+
+    .portfolio-app .bubble-hero-video {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+    }
+
+    .portfolio-app .social-sidebar {
+        right: 20px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .portfolio-app .hero-container {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        padding: 110px 20px 50px;
+
+        gap: 25px;
+        text-align: center;
+    }
+
+    .portfolio-app .hero-text {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .portfolio-app .greeting {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-app .name {
+        font-size: clamp(2.2rem, 10vw, 3rem);
+        line-height: 1.1;
+        margin: 10px 0 15px;
+        word-break: break-word;
+    }
+
+    .portfolio-app .sub-title {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .portfolio-app .bar {
+        display: none;
+    }
+
+    .portfolio-app .description {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin: 0 auto 25px;
+        max-width: 500px;
+    }
+
+    .portfolio-app .btn-group {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .portfolio-app .btn-group a {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .portfolio-app .btn-glow,
+    .portfolio-app .btn-outline {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .portfolio-app .hero-visual {
+        position: relative;
+
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: visible;
+    }
+
+    .portfolio-app .bubble-hero-video {
+        width: min(90vw, 430px);
+        height: auto;
+    }
+
+    .portfolio-app .social-sidebar {
+        position: fixed;
+
+        right: 12px;
+        top: auto;
+        bottom: 20px;
+
+        flex-direction: row;
+        gap: 12px;
+
+        padding: 8px 12px;
+        border-radius: 30px;
+
+        background: rgba(10, 7, 20, 0.75);
+        backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        z-index: 999;
+    }
+
+    .portfolio-app .social-sidebar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .portfolio-app .scroll-indicator {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .portfolio-app .hero-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .portfolio-app .name {
+        font-size: 2.1rem;
+    }
+
+    .portfolio-app .sub-title {
+        font-size: 0.85rem;
+    }
+
+    .portfolio-app .description {
+        font-size: 0.85rem;
+    }
+
+    .portfolio-app .bubble-hero-video {
+        width: 95vw;
+    }
+
+    .portfolio-app .social-sidebar {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        bottom: 12px;
+    }
+}
