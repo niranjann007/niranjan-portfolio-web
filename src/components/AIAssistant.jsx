@@ -207,7 +207,7 @@ State Board, Government of Kerala
     setInput("");
     setIsLoading(true);
 
-    // Step 1: Local-ൽ ഉത്തരമുണ്ടോ എന്ന് പരിശോധിക്കുന്നു
+    
     const localMatch = getLocalResponse(textToSend);
 
     if (localMatch) {
@@ -218,7 +218,7 @@ State Board, Government of Kerala
       return;
     }
 
-    // Step 2: Local-ൽ ഇല്ലെങ്കിൽ മാത്രം OpenRouter API വിളിക്കുന്നു
+    
     try {
       const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
 
@@ -256,7 +256,7 @@ State Board, Government of Kerala
       }
     } catch (error) {
       console.error("AI Error:", error);
-      // Fallback: എപിഐ എറർ വന്നാൽ തടസ്സമില്ലാതെ സാദാ മറുപടി നൽകും
+      
       setMessages((prev) => [
         ...prev,
         {

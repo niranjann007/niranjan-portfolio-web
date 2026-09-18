@@ -28,6 +28,15 @@ const projectsData = [
     description: "Developed a real-time IoT-based gas leakage detection system using gas sensors and a microcontroller to monitor hazardous gas levels. Implemented automated alerts using buzzer and LED indicators for immediate hazard detection and safety response.",
     tags: ["IoT", "Arduino", "Automation", "Real-Time Monitoring"],
     demo: "https://drive.google.com/drive/folders/1aO1xKAQHEmnaagaGIoJYQ5iEWdPa6fEf"
+  },
+  {
+    id: 4,
+    title: "My Portfolio Website",
+    category: "Web Development",
+    description: "A fully responsive e-commerce web application featuring product filtering, shopping cart functionality, and secure checkout integration.",
+    tags: ["React", "Node.js", "Vite", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/niranjann007/niranjan-portfolio-web",
+    demo: "https://niranjan-portfolio-web.vercel.app/"
   }
 ];
 
